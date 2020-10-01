@@ -1,0 +1,7 @@
+start - info sobre o jogo
+set_chat - começa o jogo em um chat
+status - mostra o status do player
+achievements - mostra os achv do player
+titles - mostra os titulos do player
+change_title - para mudar o titulo principal
+rank - mostra o ranking de players 
