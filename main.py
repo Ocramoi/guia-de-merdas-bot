@@ -2,7 +2,7 @@ from telegram import InlineQueryResultCachedSticker, ChosenInlineResult, ParseMo
 from telegram.ext import Updater, CommandHandler, InlineQueryHandler, ChosenInlineResultHandler, ConversationHandler, MessageHandler, Filters 
 
 from conf.env import TOKEN
-import logging
+# import logging
 
 from atributes import get_achv, Achievement, ACHIEVEMENTS, get_titles, get_ranks
 from player import Player 
@@ -12,7 +12,11 @@ from game import Game
 import signal
 import sys
 
-logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO) 
+# logger = logging.getLogger() 
+# logger.captureWarnings(True)
+# logger.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.DEBUG)
+log = open("LOG.txt", "a+")
+sys.stdout = log
 
 game = Game("./static/players.json")
 MAINTITLE = 0
